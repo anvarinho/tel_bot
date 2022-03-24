@@ -2,13 +2,18 @@ from time import sleep
 import config
 import logging
 import texts
+import re
+import os
 
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher.filters import Text
 
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token=config.TOKEN)
+PORT = int(os.environ.get("PORT", 5000))
+TOKEN = os.environ("TOKEN")
+
+bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands="start")
