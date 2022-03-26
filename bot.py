@@ -1,5 +1,4 @@
 from time import sleep
-import config
 import logging
 import texts
 import re
@@ -10,7 +9,7 @@ from aiogram.dispatcher.filters import Text
 
 logging.basicConfig(level=logging.INFO)
 
-PORT = int(os.environ.get("PORT", 5000))
+#PORT = int(os.environ.get("PORT", 5000))
 TOKEN = os.environ("TOKEN")
 
 bot = Bot(token=TOKEN)
