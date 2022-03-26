@@ -1,7 +1,7 @@
+from distutils.command.config import config
 from time import sleep
 import logging
 import texts
-import re
 import os
 
 from aiogram import Bot, Dispatcher, executor, types
@@ -10,7 +10,7 @@ from aiogram.dispatcher.filters import Text
 logging.basicConfig(level=logging.INFO)
 
 #PORT = int(os.environ.get("PORT", 5000))
-TOKEN = os.environ("TOKEN")
+TOKEN = os.environ.get("TOKEN")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
