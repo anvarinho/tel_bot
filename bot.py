@@ -10,7 +10,7 @@ from aiogram.dispatcher.filters import Text
 logging.basicConfig(level=logging.INFO)
 
 #PORT = int(os.environ.get("PORT", 5000))
-TOKEN = os.environ.get("TOKEN")
+TOKEN = os.environ.["TOKEN"]
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
